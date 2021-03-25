@@ -1,0 +1,39 @@
+.rubrique15{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rubrique15 li{
+    padding-right: 1rem;
+}
+
+.contact{
+    text-decoration: underline;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+.contact:hover{
+    color: #b1c700;
+}
+
+@media only screen and (max-width:1540px){
+
+    .rubrique15{
+        margin: 0 auto;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width:770px){
+
+    .rubrique15 h2{
+
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+}

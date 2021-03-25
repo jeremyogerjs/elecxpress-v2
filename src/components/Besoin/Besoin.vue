@@ -1,0 +1,143 @@
+<template>
+    <div>
+        <h1>Le solaire connecté aux reseaux</h1>
+        <hr />
+        <div class="rubrique13">
+            <h2>Est ce que je peux installer ça chez moi ?</h2>
+
+            <div class="description3">
+                <h3>Qui peut en bénéficier ?</h3>
+                <p class="description">
+                Tout titulaire d'un abonnement électrique ( d'un compteur),
+                particulier, professionnel, organisme public, association... qu'il
+                soit propriétaire ou locataire , sur terre coutumière ou terre de
+                droit commun peut installer son propre générateur photovoltaïque sous
+                certaines réserves:<br />
+                -Pour les locataires,compte tenu de la nature des travaux il faut
+                avoir l'accord du propriétaire ou du Syndic dans le cas de
+                copropriété.<br />
+                Des installations moins "lourdes" peuvent être envisagées.
+                <span class="contact" @click="toggleForm">Contactez nous.</span>
+                </p>
+            </div>
+
+            <div class="description4">
+                <h3>Les conditions administratives.</h3>
+
+                <p class="description">
+                Dans tous les cas il faudra satisfaire à quelques conditions
+                d'éligibilité (ELECXPRESS se charge de la fourniture de ces
+                documents):<br />
+                -L’accord de raccordement du gestionnaire de réseau concerné (EEC ou
+                ENERCAL selon votre commune de résidence).<br />
+                -Une autorisation d'exploiter une centrale photovoltaïque délivrée par
+                la DIMENC.<br />
+                -Une attestation COTSUEL de l'installation photovoltaïque.<br />
+                -La puissance du générateur photovoltaïque installé ne doit pas être
+                supérieure à celle de votre abonnement (ou compteur électrique) en
+                KVA. Si vous ne la connaissez pas, il s'agit de la
+                <a href="#">"prime fixe"</a> de votre facture.<br />
+
+                <span style="font-size: 1.5rem">Note:</span> Une fois "l'accord de
+                raccordement" du gestionnaire réseau délivrée, ce dernier viendra
+                remplacer votre compteur par un compteur double flux
+                "consommateur/producteur".<br />
+
+                <span style="font-size: 1.5rem">Son coût ? </span><br />
+
+                Le compteur est à la charge de gestionnaire, la main d’œuvre et le
+                déplacement nécessaires au remplacement du compteur sont à la charge
+                du client.<br /><br />
+
+                <a href="https://www.agence-energie.nc/" target="_blank">Cliquez ici</a>
+                pour en savoir plus.
+                </p>
+            </div>
+
+            <div class="description5">
+                <h3>Les conditions environnementales</h3>
+                <p class="description">
+                Pour une production maximale, les modules photovoltaïques doivent être
+                orientés vers le nord avec une inclinaison de 15 à 30°.<br /><br />
+                Toute autre orientation des modules réduira la production et donc le
+                retour sur investissement.<br /><br />
+                Dans un soucis d'économie d'installation, les modules photovoltaïques
+                sont, dans la mesure du possible, installés sur la toiture en
+                surimposition (au dessus de la toiture, sur une structure en
+                aluminium).<br /><br />
+                Il faut pour cela qu'un des pents de la toiture soit orienté vers le
+                nord, ou éventuellement que le toit ait une faible pente.<br /><br />
+                L'emplacement idéal serait dépourvu d'ombre. <br /><br  />Si ce n'est pas le cas, 
+                un support déporté peut être envisagé. C'est
+                peut être l'occasion de réaliser un carport, une véranda ou un faré
+                couvert de panneaux solaires. Pourquoi ne pas envisager un système
+                transportable pour les locataires ?<br /><br />
+                La plupart des onduleurs connecté au réseau son consultables à
+                distance via internet et leur données de productions instantanée,
+                journalière, mensuelle, annuelle sont stockés sur le serveur du
+                constructeur. De la même manière, l'installateur (nous en
+                l’occurrence) peut consulter à distance l'état du système, et la
+                production de chaque modules photovoltaïques (c'est du moins le cas
+                des onduleurs que nous utilisons) et diagnostiquer d'éventuelles
+                pannes.<br /><br />
+                Bien qu'elle soit facultative au fonctionnement de l'installation, une
+                connexion internet est un plus pour le suivi de production, et les
+                diagnostics à distance.<br /><br />
+                Bref, chaque cas est spécifique. Propriétaire ou locataire,
+                orientation des modules, ombres, horizon montagneux plat ou urbain,
+                position géographique (le rayonnement solaire de Koumac est différent
+                de celui de Nouméa qui est lui même différent de celui de Nessadiou ,
+                Poindimié ou Koné), liaison internet disponible ou pas.<br /><br />
+                Ou que vous soyez en Nouvelle-Calédonie, ELECXPRESS viendra à votre
+                rencontre pour tenir compte de tous ces paramètres et vous délivrer
+                une simulation de production annuelle et de retour sur investissement
+                personnalisée.<br /><br />
+                N'hésitez pas à nous
+                <span class="contact" @click="toggleForm">Contacter.</span>
+                </p>
+            </div>
+        </div>
+
+        <router-link to="/reseaux/Rentable" class="rubrique-suivante">
+        <p>Suivant</p>
+        <span class="fleche-haut"></span>
+        <span class="fleche-bas"></span>
+        </router-link>
+        <router-link to="/reseaux/Comment-sa-marche" class="rubrique-precedente">
+        <span class="fleche-haut-Bis"></span>
+        <span class="fleche-bas-Bis"></span>
+        <p>Précédent</p>
+        </router-link>
+
+        <Contact :revele="revele" :toggleForm="toggleForm"></Contact>
+    </div>
+</template>
+
+
+<script>
+
+import Contact from '../contactForm/Contact'
+export default {
+  name: "Besoin",
+  data(){
+      return{
+          revele:false,
+      }
+  },
+
+  components:{
+      'Contact':Contact
+  },
+  methods:{
+      toggleForm(){
+          this.revele = !this.revele;
+      }
+  }
+};
+</script>
+
+
+<style scoped src="./Besoin.css">
+</style>
+
+

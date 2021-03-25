@@ -1,0 +1,391 @@
+.header p{
+    font-size: small;
+    margin-left: 2rem;
+    margin-top: 0;
+    display: inline-block; 
+    
+}
+
+
+.menu a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #b1c700;
+    transition: width 0.2s ease-in-out;
+}
+.menu a:hover::after{
+    width: 100%;
+    
+}
+.email {
+    font-size: smaller;
+    color: white;
+    margin-top: 45px;
+    text-decoration: none;
+    height: max-content;
+    cursor: pointer;
+    transition: color .5s;
+    
+}
+.email:hover{
+    color: #b1c700;
+}
+.header{
+    height: 95px;
+    background-color: #333333;
+    color: white;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.en-tete{
+    
+    display: flex;
+    float: left;
+    margin-left: 500px;
+    height: 110px;
+}
+
+.tel{
+    
+    cursor: unset;
+    height: max-content;
+}
+.coord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.titre{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    height: 110px;
+}
+
+.titre img{
+    height: 95px;
+    object-fit: cover;
+    margin: 0%;
+}
+
+/*-------------------------------------Menu mobile*/
+#menu-mobile{
+    height: 40px;
+    width: 20px;
+    cursor: pointer;
+    margin: 0 0 ;
+    position: absolute;
+    right: 10px;
+
+    display: none;
+}
+
+#menu-mobile span{
+    
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+#menu-mobile span::before,#menu-mobile span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+#menu-mobile span::before{
+    transform: translateY(-7px);
+}
+
+#menu-mobile span::after{
+    transform: translateY(7px);
+}
+
+.bg1{
+    background: rgba(0, 0, 0,0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.bg2{
+    background: rgba(0, 0, 0,0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+/*-----------------------------Animation burger---------------------------*/
+#menu-mobile.active span{
+    background-color: transparent;
+}
+
+#menu-mobile.active span::after{
+    transform: translateY(0) rotateZ(45deg);
+}
+
+#menu-mobile.active span::before{
+    transform: translateY(0) rotateZ(-45deg);
+}
+
+/*--------------------------------------- Menu nav ---------------------------------*/
+.menu, .menu-container, .menu-container-item{  
+    height: 25px; 
+    position: relative;
+}
+.menu{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    float: right;
+    left: 55rem;
+}
+.menu-container,.menu-container-item{
+    display: flex;
+    
+    
+}
+
+.menu-container-item p {
+    margin-top: unset;
+    margin-block-end: 0;
+    cursor: pointer;
+    font-size: smaller; 
+}
+
+
+.menu .menu-item{
+    display: flex;
+    align-items: center;
+}
+.menu  a, .en-tete p{
+    font-size: smaller;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+       
+}
+
+.menu-container-item:hover .sous-menu {
+    display: flex;
+    height: max-content;
+    z-index: 20;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.sous-menu.active  {
+    display: flex;
+    height: max-content;
+    z-index: 20;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+
+.sous-menu-item a{
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   margin-right: 1rem;
+   margin-left: 1rem;
+   
+}
+
+.sous-menu{
+    position: absolute;
+    top: 22px;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    width: max-content;
+    height: max-content;
+    opacity: 0;
+    z-index: -1;
+    color: white;
+    background-color: #333333 ; 
+    
+}
+.email{
+    margin-left: 2rem;
+}
+.sous-menu-item-titre{
+    font-weight: bold;
+}
+
+/*-------------------------------Responsive--------------------------------*/
+
+@media only screen and (max-width:1540px){
+
+    .en-tete{
+        width: max-content;
+        padding-left: 10rem;
+        margin-left: 0px;
+    }
+
+}
+
+
+@media only screen and (max-width:1024px){
+
+    .menu{
+        left: 25rem;
+    }
+    .email{
+        padding-left: 2rem;
+        margin-left: 0rem;
+    }
+    .en-tete{
+        padding-left:0.3rem;
+    }
+
+}
+
+@media only screen and (max-width:770px){
+
+  
+
+    .menu{
+        left: 11rem; 
+        line-height: 1.5rem; 
+    }
+    .email{
+        display: none;
+        justify-content: center;
+        padding-left:0;
+        margin-left: 0;
+    }
+    .menu-container-item:hover .sous-menu  {
+        display: flex;
+        position: absolute;
+        color: white;
+        flex-wrap: nowrap;
+        height: max-content;
+        width: max-content;
+        z-index: 200;
+    }
+
+    .en-tete{
+        padding-left: 0.3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen and (max-width: 415px )  {
+
+    /*-----------------------------Menu-mobile-----------------------------------------------*/
+    #menu-mobile{
+        display: initial;
+    }
+
+    
+    .menu{
+        
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 155px;
+        height: max-content;
+        position: absolute;
+        left: 185px;
+        top: 40px;
+        background-color: #333333;
+        z-index: 10;
+        transform: translateX(100%);
+        display: none;
+        opacity: 0;
+    }
+    .menu.active{
+        transform: translateX(0);
+        transition: transform .5s easeInOut;
+        position: absolute;
+        display: flex;
+        z-index: 3;
+        opacity: 1;
+        visibility: visible;
+
+
+    }
+
+    
+    .menu-container-item,.menu-container{
+        width: 100%;
+    }
+    .menu-container a, .menu-container-item a{
+        
+        color: white;
+        margin: 0 ;
+       
+        
+    }
+
+    
+    .header p {
+        margin-left: 0;
+    }
+    .sous-menu-item a{
+        padding: 1px;
+        
+    }
+    .sous-menu{
+        right: 145px;
+        width: 185px;
+        background-color: #333333;
+        top: 20px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .sous-menu.active  {
+        display: flex;
+        height: max-content;
+        z-index: 200;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    .email{
+        display: none;
+    }
+    .en-tete{
+        flex-direction: row;
+        padding-left: 5px;
+    }
+    .coord{
+        padding-left: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px){
+
+    .menu{
+        left: 200px;
+    }
+
+
+}

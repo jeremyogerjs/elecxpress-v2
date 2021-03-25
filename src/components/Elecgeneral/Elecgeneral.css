@@ -1,0 +1,88 @@
+/* style Electricité général-------------------------------------------------------------------------------*/
+
+.rubrique8 h3,.rubrique9 h3{
+    margin: 20px auto;
+    font-weight: bold;
+}
+.rubrique8 li, .rubrique9 li {
+    list-style: none;
+    line-height: 2rem;
+}
+.rubrique8{
+    
+    background-color: #ffffff;
+    width: 100%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+}
+.rubrique8 ul{
+
+    position: relative;
+    left: 10rem;
+}
+
+
+.rubrique9{
+    background-color: #eeeeee;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+   
+}
+
+.rubrique9 ul{
+    float: left;
+    position: relative;
+    left: 4rem;
+}
+
+.image-rubrique9{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    margin-right: 5rem;
+    border-radius: 100%;
+    margin-top: 250px;
+    float: right;
+}
+
+.rubrique10{
+    background-color: cyan ;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius:2rem ;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    width: 500px;
+    margin-right: 20rem;
+}
+
+/*--------------------------------------Responsive------------------------------------*/
+
+@media only screen and (max-width:1024px){
+    .rubrique9 ul,.rubrique8 ul{
+        left: 0%;
+    }
+
+}
+
+@media only screen and (max-width:770px){
+
+    .rubrique8 ul,.rubrique9 ul{
+        left: 0%;
+        padding-right: 10px;
+    }
+
+    .rubrique9 h3,.rubrique8 h3{
+        left: 0%;
+    }
+    .rubrique9,.rubrique8{
+        height: initial;
+    }
+
+}

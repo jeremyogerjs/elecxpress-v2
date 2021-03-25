@@ -1,0 +1,149 @@
+
+/*-------------------------- Accueil-------------------------------------------*/
+
+.mini-description{
+    align-items: center;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
+
+}
+
+.mini-description h1{
+    font-size: 3rem;
+    margin: 10px;
+}
+.rubrique1{
+    width: 100%;
+    background-color: #eeeeee;
+
+}
+
+.rubrique2{
+    width: max-content;
+    left: 32rem;
+    position: relative;
+    border-radius: 10px;
+    border-color: #b1c700;
+    border-width: 15px;
+}
+.rubrique3{
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    
+}
+
+.description-gris-1{
+    font-style: italic;
+}
+
+.description-gris-1,.description-gris-2{
+    margin-left: 15rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    padding: 20px;
+    
+}
+.description-blanc{
+    font-style: italic;
+}
+
+.description,.description-blanc,.description-rubrique5-1,.description-rubrique5-1bis,.description-rubrique5-2,.description-rubrique5-3,.description-rubrique5-4,.description-rubrique5-5,.description-rubrique5-6,.description-rubrique5-6Bis{
+    margin-left: 10px;
+    padding: 20px;
+    line-height: 2rem;
+    font-size: 1rem;  
+}
+.description-rubrique5-6Bis{
+    margin-left: 15rem;
+}
+.description-rubrique4,.description-rubrique4Bis-list,.description-rubrique4Bis{
+    margin-left: 10px;
+    line-height: 2rem;
+    font-size: 1rem;  
+}
+.description-rubrique5-1bis,.description-rubrique5-2,.description-rubrique5-3,.description-rubrique5-4,.description-rubrique5-5{
+    display: flex;
+    justify-content: space-evenly;
+    width: 480px;
+    height: 600px;
+}
+
+.description a,.description-gris-1 a, .description-rubrique11-1 a,.description-blanc a{
+    text-decoration: underline;
+    color: black;
+    transition: color .3s;
+}
+
+.description a:hover, .description-gris-1 a:hover, .description-rubrique11-1 a:hover,.description-blanc a:hover{
+    color:#b1c700;
+
+}
+
+/*----------------------------------------------Reponsive-------------------------*/
+
+@media only screen and (max-width:1024px){
+
+    .description-gris-1,.description-gris-2{
+        margin-left: 4rem;
+    }
+
+    .rubrique2{
+        margin-left: 1rem;
+        left: 0rem;
+        
+    }
+
+}
+
+@media only screen and (max-width:770px){
+
+    .rubrique2{
+        margin-left: 0;
+        width: 100%;
+
+    }
+
+    .mini-description{
+        width: 100%;
+    }
+    .mini-description h1{
+        font-size: 2.5rem !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .description-gris-1{
+        margin-left: 0;
+        padding: 20px;
+    }
+    .SlideAccueil{
+        width: 100%;
+    }
+    .SlideAccueil img{
+        object-fit: cover;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 415px )  {
+
+
+    .rubrique2{
+        position: relative;
+        left: 0 ;
+    }
+
+    .mini-description h1{
+        text-align: center;
+        font-size: 1.8rem !important;
+    }
+
+    .mini-description p {
+        text-align: center;
+    }
+}
+

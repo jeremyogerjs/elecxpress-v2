@@ -1,0 +1,22 @@
+.rubrique7 h3{
+    margin: 0px 1rem;
+    font-size: 1.5rem;
+}
+
+.rubrique7{
+    display: flex;  
+    width:100%;  
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+span{
+    text-decoration: underline;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+span:hover{
+    color: #b1c700;
+}

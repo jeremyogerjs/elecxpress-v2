@@ -1,0 +1,176 @@
+.description-rubrique5-2{
+    margin-left: 18px;
+    margin-right: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.rubrique5 h2{
+    margin: 1rem auto !important;
+    align-items: center !important;   
+    font-size: 2.5rem !important;
+    width: max-content !important;
+}
+.sous-rubrique5,.sous-rubrique5Bis{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 150px; 
+}
+
+.sous-rubrique5Bis{
+
+    margin:50px auto;
+}
+.sous-rubrique5_shema{
+    display: flex;
+    width: 100%; 
+}
+.batterie{
+    display: flex;
+    object-fit: cover;
+    width: 130px;
+    height: 102px;
+    margin: 5px auto;
+    bottom: 100px;
+    
+}
+
+.regulateur{
+    
+    bottom: 100px;
+}
+
+
+.onduleur,.panneaux,.groupe-elec,.regulateur{
+    display: flex;
+    object-fit: cover;
+    width:350px ;
+    
+    margin: 5px auto;
+    
+}
+.onduleur{
+    width: 400px;
+    height: auto;
+    
+}
+.groupe-elec{
+    bottom: 100px;
+}
+.panneaux{
+    bottom: 35px;
+
+}
+.description-rubrique5-5,.description-rubrique5-3{
+    
+    justify-content: center;
+}
+.shema_sous-rubrique5 img{
+    width: 510px;
+    height: 360px;  
+    margin: 2rem auto;
+    
+}
+.rubrique5 h3,.rubrique7 h3{
+    margin: 0px 1rem;
+    font-size: 1.5rem;
+}
+
+/*----------------------Responsive-----------------------------------------*/
+
+
+@media only screen and (max-width:1024px){
+
+
+    .sous-rubrique5_shema{
+        display: flex;
+        flex-direction:  column-reverse;
+        flex-wrap: wrap;
+    }
+
+
+    .shema_sous-rubrique5{
+        text-align: center;
+    }
+    .description-rubrique5-6Bis{
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width:770px){
+
+
+    .description-rubrique5-1bis{
+        margin-right: 20px;
+
+    }
+
+    .sous-rubrique5, .sous-rubrique5Bis{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .sous-rubrique5_shema{
+        display: flex;
+        flex-direction:  column-reverse;
+        flex-wrap: wrap;
+    }
+    .shema_sous-rubrique5,.description-rubrique5-6Bis{
+       padding: 0px;
+       
+    }
+
+    .description-rubrique5-6Bis{
+        width: 90%;
+        margin: 0 auto;
+        margin-left: unset !important;
+    }
+    .shema_sous-rubrique5{
+       margin-left: unset;
+    }
+    
+}
+
+@media only screen and (max-width: 415px ) {
+
+    .rubrique5 h2{
+        width: 100% !important;
+    }
+   
+
+    .sous-rubrique5Bis{
+        position: relative;
+        top: 9rem;
+    }
+   .sous-rubrique5{
+       top: 1rem;
+       position: relative;
+   }
+
+   .shema_sous-rubrique5 img{
+    width: 100%;
+    height: max-content;
+    
+   
+       
+   }
+   .onduleur{
+       width: 100%;
+   }
+
+   .description-rubrique5-5,.description-rubrique5-4,.description-rubrique5-2,.description-rubrique5-6Bis{
+    width: 100% !important;
+       margin-left: 9px;
+       margin-right: 10px;
+       padding: 0 10px;
+   }
+
+   .shema_sous-rubrique5{
+       
+       width: 100%;
+   }
+}

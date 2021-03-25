@@ -1,0 +1,42 @@
+p{
+    width: max-content;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+.realisation{
+
+    height: 100vh;
+}
+
+@media screen and (max-width:1540px){
+    .realisation{
+
+        height: 100%;
+    }
+    
+
+    p{
+        padding: 10px 0 !important;
+    }
+
+}
+
+@media screen and (max-width:770px){
+
+    .realisation{
+
+        height: calc(100vh - 175px);
+    }
+}
+
+@media screen and (max-width:414px){
+
+    .realisation{
+        height:636px;
+    }
+}
+
+
+
