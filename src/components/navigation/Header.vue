@@ -3,10 +3,10 @@
             <div v-if="display" class="bg2" @click.prevent="ToggleMenu"></div>
             <div v-if="displayMenu" class="bg1" @click.prevent="showMenu"></div>
         <div class="en-tete">
-            <router-link to="/" class="titre" exact title="Elecxpress"><img src="../../assets/GIFlogoColorSmall-edited.jpg"></router-link>
+            <router-link to="/" class="titre" exact title="Elecxpress"><img src="../../assets/GIFlogoColorSmall-edited.jpg" alt="logo elecxpress"></router-link>
             <div class="coord">
 
-                <p @click="toggleForm" class="email">info@elecxpress.net</p>
+                <a href="mailto:info@elecxpress.net" class="email">info@elecxpress.net</a>
                 <p class="tel"> +687 75 61 67</p>
             </div>
         </div>
@@ -39,60 +39,37 @@
 
         </div>
         
-        <Contact v-bind:revele="revele" :toggleForm="toggleForm"></Contact>
+        
     </div>
 </template>
 
 
 <script>
-import ContactForm from '../contactForm/Contact'
 
 export default{
     name:'header-top',
     
     data(){
         return{
-            revele:false,
             display:false,
-            displayMenu:false,
-            
+            displayMenu:false,  
         }
-
-    },
-    components:{
-        'Contact':ContactForm
     },
     methods:{
-        toggleForm(){
-            this.revele = !this.revele;
-        },
         showMenu(){
             this.$el.lastElementChild.classList.toggle('active');
             this.$el.lastElementChild.previousElementSibling.classList.toggle('active');
-            console.log(this.$el.lastElementChild)
-            console.log(this.$el)
-            
-            this.displayMenu = !this.displayMenu;
-            
+            this.displayMenu = !this.displayMenu; 
         },
         ToggleMenu(){
-            
-
-                this.display = !this.display;
-           
-            
-            
+            this.display = !this.display;
         },
         hiddenMenu(){
             this.display = false;
         }
     },
-    
-
 }
-
 </script>
-
 
 <style scoped src='./Header.css'>
 

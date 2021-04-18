@@ -56,7 +56,7 @@
                 ne pas voir le soleil durant plusieurs jours consécutifs voire des semaines.<br>
                 Là encore, le groupe électrogène couplé à un chargeur de batteries trouvera toute son utilité.<br>
                 Nous avons l'habitude d'équiper nos installations d'inverseurs de source automatiques* et de chargeur de batterie puissants.
-                <span @click="toggleForm">Contactez nous</span> pour en savoir plus.
+                <a href="mailto:info@elecxpress.net">Contactez nous</a> pour en savoir plus.
             </p>
         </div>
 
@@ -73,32 +73,13 @@
             <p>Précédent</p>
         
         </router-link>
-
-        <Contact :revele="revele" :toggleForm="toggleForm"></Contact>
     </div>
 
 </template>
 
 <script>
-
-import Contact from '../contactForm/Contact'
 export default {
     name:'Conseil',
-    data(){
-        return{
-            revele:false,
-        }
-    },
-    components:{
-        'Contact':Contact
-    },
-
-    methods:{
-        toggleForm(){
-            this.revele = !this.revele;
-        }
-    }
-
 }
 </script>
 

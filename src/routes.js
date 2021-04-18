@@ -11,9 +11,7 @@ import Commentfaire from './components/CommentFaire/CommentFaire'
 import Confiance from './components/Confiance/Confiance'
 import Elec from './components/Elecgeneral/Elecgeneral'
 import Realisations from './components/Realisations/Realisation'
-import Contact from './components/contactForm/Contact'
 export default[
-
     {path:'/', component: Accueil},
     {path:"/site-isole/c'est-pour-qui", component: pourqui},
     {path:"/site-isole/comment-sa-marche", component: Commentmarche},
@@ -27,7 +25,6 @@ export default[
     {path:"/reseaux/Nous-faire-confiance", component: Confiance},
     {path:"/Electricite-general", component: Elec},
     {path:"/Nos-Realisations", component: Realisations},
-    {path:"/Nous-Contacter", component: Contact},
 ]
     
     

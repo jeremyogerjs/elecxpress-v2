@@ -17,7 +17,7 @@
                 avoir l'accord du propriétaire ou du Syndic dans le cas de
                 copropriété.<br />
                 Des installations moins "lourdes" peuvent être envisagées.
-                <span class="contact" @click="toggleForm">Contactez nous.</span>
+                <a href="mailto:info@elecxpress.net" class="contact" >Contactez nous.</a>
                 </p>
             </div>
 
@@ -93,7 +93,7 @@
                 une simulation de production annuelle et de retour sur investissement
                 personnalisée.<br /><br />
                 N'hésitez pas à nous
-                <span class="contact" @click="toggleForm">Contacter.</span>
+                <a href="mailto:info@elecxpress.net">Contacter.</a>
                 </p>
             </div>
         </div>
@@ -108,31 +108,13 @@
         <span class="fleche-bas-Bis"></span>
         <p>Précédent</p>
         </router-link>
-
-        <Contact :revele="revele" :toggleForm="toggleForm"></Contact>
     </div>
 </template>
 
 
 <script>
-
-import Contact from '../contactForm/Contact'
 export default {
   name: "Besoin",
-  data(){
-      return{
-          revele:false,
-      }
-  },
-
-  components:{
-      'Contact':Contact
-  },
-  methods:{
-      toggleForm(){
-          this.revele = !this.revele;
-      }
-  }
 };
 </script>
 

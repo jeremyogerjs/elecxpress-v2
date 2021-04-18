@@ -8,7 +8,7 @@
             <h2>Je veux mon installation ! Comment faire ?</h2>
 
             <ol class="description">
-                <li><span class="contact" @click="toggleForm">Contactez nous.</span><br>  
+                <li><a href="mailto: info@elecxpress.net" class="contact">Contactez nous.</a><br>  
 
                     Nous conviendrons d'un rendez-vous chez vous, afin de définir les paramètres  
                     environnementaux de l'installation et écouter vos souhaits.<br> 
@@ -58,34 +58,13 @@
             <p>Précédent</p>
         
         </router-link>
-        <Contact :revele="revele" :toggleForm="toggleForm"></Contact>
     </div>
 
 </template>
 
 <script>
-
-import Contact from '../contactForm/Contact'
-
 export default {
     name:'Commentfaire',
-    data(){
-        return{
-            revele:false,
-        }
-    },
-    methods:{
-        toggleForm(){
-
-            this.revele = !this.revele;
-        }
-    },
-
-    components:{
-        'Contact':Contact
-        
-    }
-
 }
 </script>
 
